@@ -1,0 +1,50 @@
+{
+  "synthetic": true,
+  "timezone": "UTC",
+  "tables": {
+    "appeals": [
+      {
+        "id": "appeal1-accepted",
+        "revises": "appeal1",
+        "order_id": "order1",
+        "partner_id": "p1",
+        "kind": "missing_code",
+        "touch_id": "new-code1",
+        "status": "accepted",
+        "occurred_at": "2026-03-22T10:00:00+00:00",
+        "known_at": "2026-07-20T10:00:00+00:00"
+      },
+      {
+        "id": "invalid-click",
+        "order_id": "order1",
+        "partner_id": "p0",
+        "kind": "withdraw_touch",
+        "touch_id": "t1-0",
+        "status": "accepted",
+        "occurred_at": "2026-03-20T10:00:00+00:00",
+        "known_at": "2026-07-20T10:00:00+00:00"
+      }
+    ],
+    "touches": [
+      {
+        "id": "new-code1",
+        "partner_id": "p1",
+        "device_id": "dev1",
+        "kind": "code",
+        "occurred_at": "2026-03-22T10:00:00+00:00",
+        "known_at": "2026-07-20T10:00:00+00:00",
+        "brand": "brand0"
+      }
+    ],
+    "recoveries": [
+      {
+        "id": "recover1-received",
+        "revises": "recover1",
+        "signed_id": "signed1",
+        "amount_minor": 420,
+        "state": "received",
+        "known_at": "2026-07-22T10:00:00+00:00"
+      }
+    ]
+  }
+}

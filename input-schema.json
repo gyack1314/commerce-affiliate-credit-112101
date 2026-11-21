@@ -1,0 +1,134 @@
+{
+  "references": [
+    [
+      "orders",
+      "account_id",
+      "cohort",
+      "id"
+    ],
+    [
+      "lines",
+      "order_id",
+      "orders",
+      "id"
+    ],
+    [
+      "returns",
+      "line_id",
+      "lines",
+      "id"
+    ],
+    [
+      "touches",
+      "partner_id",
+      "contracts",
+      "partner_id"
+    ]
+  ],
+  "tables": {
+    "cohort": {
+      "id": "str",
+      "eligible_at": "str",
+      "country": "str",
+      "pre_spend": "int",
+      "returning": "bool"
+    },
+    "touches": {
+      "id": "str",
+      "partner_id": "str",
+      "device_id": "str",
+      "kind": "str",
+      "occurred_at": "str",
+      "known_at": "str",
+      "brand": "str"
+    },
+    "identity_links": {
+      "id": "str",
+      "device_id": "str",
+      "account_id": "str",
+      "valid_from": "str",
+      "valid_to": "str",
+      "known_at": "str"
+    },
+    "orders": {
+      "id": "str",
+      "account_id": "str",
+      "paid_at": "str",
+      "known_at": "str",
+      "mature_at": "str"
+    },
+    "lines": {
+      "id": "str",
+      "order_id": "str",
+      "brand": "str",
+      "quantity": "int",
+      "paid_minor": "int"
+    },
+    "returns": {
+      "id": "str",
+      "line_id": "str",
+      "quantity": "int",
+      "amount_minor": "int",
+      "occurred_at": "str",
+      "known_at": "str"
+    },
+    "contracts": {
+      "id": "str",
+      "partner_id": "str",
+      "brand": "str",
+      "valid_from": "str",
+      "valid_to": "str",
+      "eligible_kinds": "list",
+      "window_days": "int",
+      "mode": "str",
+      "pool": "str",
+      "weight": "int",
+      "commission_rate": "float"
+    },
+    "appeals": {
+      "id": "str",
+      "order_id": "str",
+      "partner_id": "str",
+      "kind": "str",
+      "touch_id": "str",
+      "status": "str",
+      "occurred_at": "str",
+      "known_at": "str"
+    },
+    "signed_commissions": {
+      "id": "str",
+      "order_id": "str",
+      "partner_id": "str",
+      "amount_minor": "int",
+      "signed_at": "str"
+    },
+    "recoveries": {
+      "id": "str",
+      "signed_id": "str",
+      "amount_minor": "int",
+      "state": "str",
+      "known_at": "str"
+    },
+    "budgets": {
+      "id": "str",
+      "cash_available": "int"
+    },
+    "plans": {
+      "id": "str",
+      "partner_id": "str",
+      "brand": "str",
+      "exclusive": "bool",
+      "start": "str",
+      "end": "str",
+      "spend_minor": "int"
+    },
+    "accepted_plans": {
+      "id": "str",
+      "partner_id": "str",
+      "brand": "str",
+      "start": "str",
+      "end": "str",
+      "spend_minor": "int"
+    }
+  }
+}
